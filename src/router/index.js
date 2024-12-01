@@ -4,22 +4,12 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: () => import("../views/Home.vue"),
-  },
-  {
-    path: "/login",
-    name: "Login",
-    component: () => import("../views/Login.vue"),
-  },
-  {
-    path: "/register",
-    name: "Register",
-    component: () => import("../views/Register.vue"),
+    component: () => import("@/views/index.vue"),
   },
 ];
 // 创建路由实例对象
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes, // 键与之值相同，可以简写
 });
 export default router;
